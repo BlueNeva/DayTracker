@@ -11,21 +11,25 @@ function displayDate() {
 function updateCountdown() {
   const currentDate = new Date().getTime();
   const daysRemaining = Math.floor((endDate - currentDate) / (1000 * 60 * 60 * 24));
+  var dayType = int -1;
   
   document.getElementById('countdown').innerText = `Days remaining: ${daysRemaining}`;
   
-  // Call your custom function based on the day type
-  let dayType;
-  if (daysRemaining % 3 === 0) {
-    dayType = 'C Day';
-    displayDescription('This is a special C Day!');
-  } else if (daysRemaining % 2 === 0) {
-    dayType = 'B Day';
-  } else {
-    dayType = 'A Day';
+if (currentDate == 
+
+  if (dayType == 2) {
+    console.log(`Today is C Day`);
+  }
+  else if (dayType == 1) {
+    console.log(`Today is B Day`);
+  }
+  else if (dayType == 0) {
+    console.log(`Today is A Day`);
+  }
+  else {
+    print("Error: dayType could not be collected");
   }
   
-  console.log(`Today is ${dayType}`);
 }
 
 // Display a custom description for the C Days
